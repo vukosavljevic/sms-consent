@@ -33,7 +33,7 @@ Capture **real CRM screenshots** (not mockups) and place them at:
 
 | File | Source in CRM |
 |------|----------------|
-| `sms-consent/customer-intake.png` | Setter Intake → Availability → SMS Appointment Notifications |
+| `sms-consent/customer-intake.jpg` | Setter Intake → Availability → SMS Appointment Notifications |
 | `sms-consent/closer-settings.png` | Closer Dashboard → Settings → Notifications |
 
 Until those files exist, the page shows dashed placeholders. Replace them before submitting your A2P campaign.
@@ -41,7 +41,7 @@ Until those files exist, the page shows dashed placeholders. Replace them before
 ## Checklist
 
 - [ ] Page loads at `/sms-consent/` without login
-- [ ] Screenshot A added (`customer-intake.png`)
+- [ ] Screenshot A added (`customer-intake.jpg`)
 - [ ] Screenshot B added (`closer-settings.png`)
 - [ ] Disclosure text matches CRM word-for-word
 - [ ] STOP and HELP mentioned in both sections
