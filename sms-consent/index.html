@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMS Consent · Solari Storage</title>
+    <meta
+      name="description"
+      content="How Solari Storage collects SMS consent from customers and representatives."
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 4h12v16H8V4zm16 0h12v16H24V4zm16 0h12v16H40V4zm16 0h12v16H56V4z"
+              fill="#00a8f5"
+              opacity="0.9"
+            />
+            <path d="M76 4h36v4H76V4zm0 8h28v4H76v-4zm0 8h20v4H76v-4z" fill="#ffffff" opacity="0.85" />
+          </svg>
+        </span>
+        <span class="brand-name">
+          <span class="brand-name-mobile">Solari</span>
+          <span class="brand-name-desktop">Solari <span>Storage</span></span>
+        </span>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="page-title">SMS Consent</h1>
+      <p class="intro">
+        Solari Storage collects explicit SMS consent before sending appointment-related text messages.
+        Consent is never inferred from a phone number alone.
+      </p>
+
+      <section id="customer-consent">
+        <h2>Customer SMS Consent</h2>
+
+        <p>
+          Customer consent is collected verbally during a phone call. The setter reads the full disclosure
+          aloud and records whether the customer explicitly agreed or declined.
+        </p>
+        <p>
+          Declining SMS does <strong>not</strong> prevent appointment booking. Consent is optional and is not
+          a condition of purchase.
+        </p>
+
+        <ul class="bullet-list">
+          <li>Consent is collected during the setter intake / appointment booking flow.</li>
+          <li>The setter reads the exact disclosure below to the customer.</li>
+          <li>
+            The setter selects <strong>Customer agreed</strong> or <strong>Customer declined</strong> — there
+            is no pre-checked box.
+          </li>
+          <li>Default state is <strong>not consented</strong>; a phone number alone does not imply consent.</li>
+          <li>
+            Messages may include: appointment confirmations, day-before reminders, day-of reminders,
+            rescheduling updates, and representative assignment / arrival updates.
+          </li>
+          <li>Message frequency varies. Message and data rates may apply.</li>
+          <li>Recipients can reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help.</li>
+        </ul>
+
+        <p class="disclosure-label">Exact disclosure (read to customer)</p>
+        <blockquote class="disclosure">
+          Would you like to receive text messages from Solari Storage regarding your scheduled appointment,
+          including appointment confirmations, reminders, rescheduling updates, and updates about your assigned
+          representative? Message frequency varies. Message and data rates may apply. Reply STOP to opt out or
+          HELP for help. Consent to receive text messages is not a condition of purchase.
+        </blockquote>
+
+        <p class="disclosure-label">Example message to customer</p>
+        <pre class="message-example">Solari Storage: Reminder — your appointment is scheduled for today at [Time].
+[Representative Name] is assigned to your appointment.
+Reply STOP to opt out or HELP for help.</pre>
+
+        <div class="screenshot-wrap">
+          <img
+            src="/sms-consent/customer-intake.png"
+            alt="Customer SMS consent in the Solari Storage setter intake form"
+            width="1200"
+            height="800"
+            class="screenshot"
+            onerror="this.replaceWith(document.getElementById('customer-screenshot-placeholder').content.cloneNode(true))"
+          />
+          <template id="customer-screenshot-placeholder">
+            <div class="screenshot-placeholder" role="img" aria-label="Customer SMS consent in the Solari Storage setter intake form">
+              <strong>Screenshot A — Customer intake form</strong>
+              <span>
+                Add <code>sms-consent/customer-intake.png</code> from Setter Intake → Availability →
+                SMS Appointment Notifications.
+              </span>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <section id="representative-consent">
+        <h2>Representative SMS Consent</h2>
+
+        <p>
+          Authorized representatives (closers) opt in from the CRM under
+          <strong>Settings → Notifications</strong>. The preference is <strong>off by default</strong> and
+          must be actively enabled.
+        </p>
+        <p>
+          Representatives can disable SMS notifications at any time. SMS is optional and not required to use
+          the CRM.
+        </p>
+
+        <ul class="bullet-list">
+          <li>Location: <strong>Closer Dashboard → Settings → Notifications</strong></li>
+          <li>Checkbox <strong>Receive appointment SMS notifications</strong> — <strong>OFF by default</strong></li>
+          <li>Representative must actively check the box and click <strong>Save preference</strong></li>
+          <li>
+            Messages are operational only: appointment date/time, customer name, phone, address, notes, links
+          </li>
+          <li>Message frequency varies. Message and data rates may apply.</li>
+          <li>Recipients can reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help.</li>
+        </ul>
+
+        <p class="disclosure-label">Exact disclosure (shown in CRM settings)</p>
+        <blockquote class="disclosure">
+          I agree to receive operational SMS notifications from Solari Storage for appointments assigned to me.
+          Messages may include appointment date and time, customer name, customer phone number, address,
+          appointment notes, and appointment-related links. Message frequency varies. Message and data rates
+          may apply. Reply STOP to opt out or HELP for help. SMS notifications are optional.
+        </blockquote>
+
+        <p class="disclosure-label">Example message to representative</p>
+        <pre class="message-example">Solari Storage: Appointment assigned for [Date] at [Time].
+
+Customer: [Customer Name]
+Phone: [Customer Phone]
+Address: [Address]
+Language: [Language]
+Agent: [Agent Name]
+Recording: [Recording URL]
+Notes: [Appointment Notes]
+
+Reply STOP to opt out or HELP for help.</pre>
+
+        <div class="screenshot-wrap">
+          <img
+            src="/sms-consent/closer-settings.png"
+            alt="Representative SMS notification preference in Solari Storage CRM settings"
+            width="1200"
+            height="800"
+            class="screenshot"
+            onerror="this.replaceWith(document.getElementById('closer-screenshot-placeholder').content.cloneNode(true))"
+          />
+          <template id="closer-screenshot-placeholder">
+            <div class="screenshot-placeholder" role="img" aria-label="Representative SMS notification preference in Solari Storage CRM settings">
+              <strong>Screenshot B — Closer Settings → Notifications</strong>
+              <span>
+                Add <code>sms-consent/closer-settings.png</code> from Closer Dashboard → Settings →
+                Notifications.
+              </span>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        To opt out of SMS messages, reply <strong>STOP</strong>. For help, reply <strong>HELP</strong>.
+        Message and data rates may apply. Message frequency varies.
+      </footer>
+    </main>
+  </body>
+</html>
